@@ -1,0 +1,1 @@
+# Object-Oriented-Programming--CSC241- The sub-folder names were based on activity numbers, and inside the sub-folders there were task files, and in each task file the task description is written on the top of the file. 
