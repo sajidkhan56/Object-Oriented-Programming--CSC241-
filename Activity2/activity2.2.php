@@ -32,7 +32,7 @@ class Heater {
     }
 
     public function cooler() {
-        if($this->increment >= $this->min) {
+        if($this->temperature >= $this->min) {
             $this->temperature -= $this->increment;
         }
     }
@@ -43,12 +43,17 @@ class Heater {
 
     public function setIncrement($increment)
     {
-        $this->increment = $increment;
+        if($increment > 0) {
+            $this->increment = $increment;
+        } else {
+            echo "Increment value will not be negitive";
+            die();
+        }
     }
 }
 
 $heater =  new Heater(10,30);
-$heater->setIncrement(7);
+$heater->setIncrement(6);
 $heater->warmer();
 echo $heater->getWarmer();
 echo "</br>";
