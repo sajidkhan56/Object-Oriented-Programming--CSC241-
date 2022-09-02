@@ -40,6 +40,23 @@ class Matrix
             echo "</br>";
         }
     }
+
+    public function mulMatrix($matrix1, $matrix2)
+    {   
+        
+        for($i = 0; $i < 3; $i++) {
+            for($j = 0; $j < 3; $j++) {
+                $product = 0;
+                for($k = 0; $k < 3; $k++) {
+                    $product += $matrix1[$i][$k] * $matrix2[$k][$j];    
+                }
+                echo $product." ";
+            }
+            echo "</br>";
+        }
+    }
+
+    
 }
 
 $matrix1 = new Matrix(array(array(1,2,3), array(4,5,6), array(7,8,9)));
@@ -47,6 +64,8 @@ $matrix2 = new Matrix(array(array(10,11,12), array(13,14,15), array(16,17,18)));
 
 $matrix = new Matrix;
 $matrix->addMatrix($matrix1->matrix, $matrix2->matrix);
+echo "</br>";
+$matrix->mulMatrix($matrix1->matrix, $matrix2->matrix);
 
 
 
