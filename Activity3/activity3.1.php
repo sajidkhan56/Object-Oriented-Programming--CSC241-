@@ -7,7 +7,7 @@
 //from the calling function. 
 //c) An AddMatrix function for addition of two matrices d)
 //A MultiplyMatrix method for finding the product of the two matrices.
-//e) An isEqual function for checking the equality of two matrices
+
 
 class Matrix
 {
